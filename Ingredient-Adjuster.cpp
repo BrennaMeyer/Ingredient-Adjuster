@@ -9,10 +9,36 @@
 //how many cookies he or she wants to make, then displays the number of cups of each ingredient needed for the specified number of cookies.
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
 
 int main()
 {
-   
+	const float cookies = 48, //original number for the recipe 
+		sugar = 1.5, //cups
+		butter = 1, //cups
+		flower = 2.75; //cups
+
+	float Cookies,
+		totalSugar,
+		totalButter,
+		totalFlower;
+
+	cout << "Please enter the desired amount of cookies:";
+	cin >> Cookies;
+
+	totalSugar = (sugar * Cookies) / cookies;
+	totalButter = (butter * Cookies) / cookies;
+	totalFlower = (flower * Cookies) / cookies;
+
+	cout << endl
+		<< "Sugar Needed =" << totalSugar << endl
+		<< "Butter Needed =" << totalButter << endl
+		<< "Flower Needed =" << totalFlower << endl
+		<< endl;
+	
+	return 0;
 }
 
 
